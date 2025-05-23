@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
     line-height: 1.6;
 }
 
@@ -9,6 +10,7 @@ body {
     margin: 0 auto;
 }
 
+/* site-header の変更・追加 */
 .site-header {
     /* 背景色をさらに透明度を高くするか、完全に透明に近い色にすることも */
     background-color: rgba(255, 255, 255, 0.5); /* 透明度を少し上げる例 */
