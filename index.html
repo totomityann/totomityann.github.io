@@ -2,17 +2,52 @@
 <html lang="ja">  
     
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>totomityann</title>  <link rel="stylesheet" href="style.css">
-    <script>
+  <meta charset="UTF-8">
+  <title>Yuta Kusakabe</title>
+  <script>
     MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
       }
     };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      margin:5%;
+    }
+    hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, white, black, white);
+    }
+    dt {
+      float:left;
+      clear:left;
+      width:13em;
+    }
+    dd {
+      margin-left:13em;
+    }
+    ol.bracket {
+      margin-left: 0em;
+    }
+    ol.bracket>li {
+      list-style-type: none;
+      counter-increment: list -1;
+      position: relative;
+    }
+    ol.bracket>li:before {
+      content: '[' counter(list) ']';
+      display: inline-block;
+      text-align: right;
+      position: absolute;
+      margin-left: -3.5em;
+      width: 3em;
+    }
+  </style>
+  <meta name="google-site-verification" content="k6VtneW2UJiDRpWBJKTtH1G_aAvgiQw4t1DRMgDrKYY" />
 </head>
     
 <body>
