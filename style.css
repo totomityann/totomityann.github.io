@@ -10,27 +10,6 @@ body {
     margin: 0 auto;
 }
 
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
 .site-header {
     /* 背景色をさらに透明度を高くするか、完全に透明に近い色にすることも */
     background-color: rgba(255, 255, 255, 0.5); /* 透明度を少し上げる例 */
