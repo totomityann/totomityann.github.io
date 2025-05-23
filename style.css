@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header {
+    /* 背景色を半透明の白に設定 (例: 80%の不透明度) */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px 0;
+    position: sticky; /* スクロールしても上部に追従 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 他の要素より手前に表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ほんのり影をつけると浮き上がって見える */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* ロゴとナビゲーションを両端に配置 */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* リストアイテムを横並びに */
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1); /* ホバー時も少し透明感を */
+    border-radius: 4px;
+}
+
+/* メインコンテンツとフッターのスタイル (ヘッダーが隠れないように) */
+main {
+    /* ヘッダーがstickyの場合、コンテンツの開始位置を調整する必要は通常ない */
+    /* もしposition: fixed; を使う場合は、ヘッダーの高さ分padding-topが必要 */
+    /* padding-top: 80px; (ヘッダーの高さに合わせて調整) */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
