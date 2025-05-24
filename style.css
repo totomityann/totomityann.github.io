@@ -12,17 +12,17 @@ body {
 
 a,
 a:visited {
-  color: #4169e1; /* リンクの色を濃い灰色に固定する例 */
+  color: #4169e1; /* リンクの色 */
   text-decoration: none;
 }
 
 a:hover {
-  color: #b4bfe0; /* マウスオーバー時は少し明るい灰色にする例 */
+  color: #b4bfe0; /* マウスオーバー時 */
   text-decoration: underline;
 }
 
 a:active {
-  color: #e0b941; /* クリック時は黒にする例 */
+  color: #e0b941; /* クリック時 */
 }
 
 /* site-header の変更・追加 */
