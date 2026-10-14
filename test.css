@@ -1,94 +1,128 @@
-body {
-    margin: 0;
-    line-height: 1.6;
-    background-color: #ebf6f7;
+/* Test-page typography. Font sources and licenses: assets/fonts/LICENSES.txt. */
+@font-face {
+    font-family: "Toto Document Roman";
+    src: url("assets/fonts/toto-roman-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Roman";
+    src: url("assets/fonts/toto-roman-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Roman";
+    src: url("assets/fonts/toto-roman-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Mincho";
+    src: url("assets/fonts/toto-mincho-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Mincho Extended";
+    src: url("https://cdn.jsdelivr.net/gh/trueroad/HaranoAjiFonts@20250811/HaranoAjiMincho-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Mincho Extended";
+    src: url("https://cdn.jsdelivr.net/gh/trueroad/HaranoAjiFonts@20250811/HaranoAjiMincho-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Toto Document Mincho";
+    src: url("assets/fonts/toto-mincho-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+:root {
+    color-scheme: light;
+    font-size: 17px;
+    background: #fff;
+    color: #161616;
+    font-family: "Toto Document Roman", "Toto Document Mincho", "Toto Document Mincho Extended", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-synthesis: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
-
-a,
-a:visited {
-  color: #4169e1; /* リンクの色 */
-  text-decoration: none;
-}
-
-a:hover {
-  color: #b4bfe0; /* マウスオーバー時 */
-  text-decoration: underline;
-}
-
-a:active {
-  color: #e0b941; /* クリック時 */
-}
-
-/* site-header の変更・追加 */
-.site-header {
-    /* 背景色をさらに透明度を高くするか、完全に透明に近い色にすることも */
-    background-color: rgba(255, 255, 255, 0.5); /* 透明度を少し上げる例 */
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-    /* すりガラス効果 */
-    -webkit-backdrop-filter: blur(10px); /* Safari用プレフィックス */
-    backdrop-filter: blur(10px); /* ぼかし効果 */
-}
-
-.site-header .container {
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; line-height: 1.95; }
+a { color: inherit; text-decoration: underline; text-decoration-thickness: .045em; text-underline-offset: .2em; }
+a:visited { color: inherit; }
+a:hover { text-decoration-thickness: .09em; }
+a:focus-visible { outline: 2px solid #333; outline-offset: 4px; }
+.page-navigation {
     display: flex;
-    justify-content: space-between; /* ロゴとナビゲーションを両端に配置 */
-    align-items: center; /* 垂直方向中央揃え */
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 1.6rem 0 0;
+    font-size: .75rem;
+    color: #555;
 }
-
-.logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
+.document { max-width: 44rem; margin: 0 auto; padding: 3.3rem 0 3rem; }
+.document-title { text-align: center; margin-bottom: 4rem; }
+.document-title h1 { font-size: 1.85rem; font-weight: 400; line-height: 1.6; margin: 0 0 1.15rem; }
+.document-title .author { font-size: 1.05rem; margin: 0; text-indent: 0; }
+.document-title .date { margin: .65rem 0 0; font-size: .9rem; text-indent: 0; }
+h2, h3 { break-after: avoid; text-align: left; line-height: 1.7; font-weight: 700; }
+h2 { margin: 2.9rem 0 1.2rem; font-size: 1.3rem; }
+h3 { margin: 2.2rem 0 .4rem; font-size: 1.08rem; }
+.section-number { display: inline-block; margin-right: .6em; }
+p { margin: 0; text-align: justify; text-justify: inter-character; line-break: strict; overflow-wrap: anywhere; }
+main p { text-indent: 1em; }
+h2 + p, h3 + p, .book-title + p, blockquote + p { text-indent: 0; }
+.book-title { margin: 0 0 1rem; text-indent: 0; text-align: left; line-height: 1.55; }
+.book-title cite { font-style: italic; }
+blockquote { margin: 1.3rem 2rem; font-size: .95rem; line-height: 1.6; }
+blockquote p { text-indent: 0; text-justify: auto; hyphens: auto; overflow-wrap: normal; }
+ruby { ruby-position: over; }
+rt { font-size: .55em; font-style: normal; }
+.document-footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid #b7b7b7; font-size: .75rem; color: #555; }
+.document-footer p { text-align: center; text-indent: 0; }
+.document-footer p + p { margin-top: .45rem; }
+.skip-link { position: absolute; top: .5rem; left: .5rem; padding: .4rem .7rem; background: #fff; transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+/* Keep MathJax's own baseline metrics: do not offset individual equations. */
+mjx-container[jax="SVG"] { direction: ltr; }
+mjx-container[jax="SVG"] > svg { max-width: 100%; }
+mjx-container[jax="SVG"][display="true"] { overflow-x: auto; overflow-y: hidden; padding: .25em 0; }
+@media (max-width: 860px) {
+    .page-navigation { margin-inline: 1.5rem; }
+    .document { margin-inline: 1.5rem; padding-top: 3rem; }
 }
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* リストアイテムを横並びに */
+@media (max-width: 540px) {
+    :root { font-size: 16px; }
+    .page-navigation { margin-inline: 1.25rem; padding-top: 1.1rem; }
+    .document { margin-inline: 1.25rem; padding-top: 2.6rem; }
+    .document-title { margin-bottom: 3rem; }
+    .document-title h1 { font-size: 1.55rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1rem; }
+    blockquote { margin-inline: 1rem; }
 }
-
-.main-nav ul li {
-    margin-left: 20px;
-}
-
-.main-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1em;
-    padding: 5px 10px;
-    transition: color 0.3s ease, background-color 0.3s ease; /* ホバー時のアニメーション */
-}
-
-.main-nav ul li a:hover {
-    color: #007bff;
-    background-color: rgba(0, 123, 255, 0.1); /* ホバー時も少し透明感を */
-    border-radius: 4px;
-}
-
-/* メインコンテンツとフッターのスタイル (ヘッダーが隠れないように) */
-main {
-    /* ヘッダーがstickyの場合、コンテンツの開始位置を調整する必要は通常ない */
-    /* もしposition: fixed; を使う場合は、ヘッダーの高さ分padding-topが必要 */
-    /* padding-top: 80px; (ヘッダーの高さに合わせて調整) */
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
+@media print {
+    @page { size: A4; margin: 25mm 24mm; }
+    :root { font-size: 10.5pt; }
+    .page-navigation, .skip-link, .document-footer a { display: none; }
+    .document { max-width: none; margin: 0; padding: 0; }
+    .document-title { margin-bottom: 3rem; }
+    a { text-decoration: none; }
+    p { orphans: 3; widows: 3; }
+    blockquote, .document-footer { break-inside: avoid; }
 }
