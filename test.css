@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    line-height: 1.6;
+    background-color: #ebf6f7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a,
+a:visited {
+  color: #4169e1; /* リンクの色 */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b4bfe0; /* マウスオーバー時 */
+  text-decoration: underline;
+}
+
+a:active {
+  color: #e0b941; /* クリック時 */
+}
+
+/* site-header の変更・追加 */
+.site-header {
+    /* 背景色をさらに透明度を高くするか、完全に透明に近い色にすることも */
+    background-color: rgba(255, 255, 255, 0.5); /* 透明度を少し上げる例 */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* すりガラス効果 */
+    -webkit-backdrop-filter: blur(10px); /* Safari用プレフィックス */
+    backdrop-filter: blur(10px); /* ぼかし効果 */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* ロゴとナビゲーションを両端に配置 */
+    align-items: center; /* 垂直方向中央揃え */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* リストアイテムを横並びに */
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1); /* ホバー時も少し透明感を */
+    border-radius: 4px;
+}
+
+/* メインコンテンツとフッターのスタイル (ヘッダーが隠れないように) */
+main {
+    /* ヘッダーがstickyの場合、コンテンツの開始位置を調整する必要は通常ない */
+    /* もしposition: fixed; を使う場合は、ヘッダーの高さ分padding-topが必要 */
+    /* padding-top: 80px; (ヘッダーの高さに合わせて調整) */
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
